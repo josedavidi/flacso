@@ -88,7 +88,7 @@
                   </thead>
                   <tbody>
                     <?php
-                      $eti = $db->query("SELECT DISTINCT equipo_tareas.eti, equipo_tareas_informe.id as eti_id, equipo_tareas_informe.eti as idEti, meses.nombre as mes_nombre, equiposp.nombre as equipo_nombre, equiposp.foto as equipo_foto, equipo_tareas_informe.estado as eti_estado, usuarios.nombres as user_name, usuarios.apellidos as user_lastname, equipo_tareas_informe.fecha as eti_fecha  FROM equipo_tareas_informe INNER JOIN meses ON equipo_tareas_informe.mes_id = meses.id INNER JOIN equipo_tareas ON equipo_tareas_informe.eti = equipo_tareas.eti INNER JOIN equiposp ON equipo_tareas.equipo_id = equiposp.id INNER JOIN usuarios ON equipo_tareas_informe.user_id = usuarios.id  WHERE age = 2019")or die('error'.mysqli_errno($db));
+                      $eti = $db->query("SELECT DISTINCT equipo_tareas.eti, equipo_tareas_informe.id as eti_id, equipo_tareas_informe.eti as idEti, meses.nombre as mes_nombre, equiposp.nombre as equipo_nombre, equiposp.foto as equipo_foto, equipo_tareas_informe.estado as eti_estado, usuarios.nombres as user_name, usuarios.apellidos as user_lastname, equipo_tareas_informe.fecha as eti_fecha  FROM equipo_tareas_informe INNER JOIN meses ON equipo_tareas_informe.mes_id = meses.id INNER JOIN equipo_tareas ON equipo_tareas_informe.eti = equipo_tareas.eti INNER JOIN equiposp ON equipo_tareas.equipo_id = equiposp.id INNER JOIN usuarios ON equipo_tareas_informe.user_id = usuarios.id ")or die('error'.mysqli_errno($db));
 
                       while($fila = mysqli_fetch_array($eti))
                       {
