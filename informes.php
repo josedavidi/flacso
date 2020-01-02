@@ -34,14 +34,15 @@
                     <h5>Informes Preventivos</h5>
                   </div>
                   <div class="col-sm-3">
-                      <select class="custom-select">
+                    <form action="reportsByDates.php" method="POST">
+                      <select class="custom-select" name="contrato">
                         <option>Eliga el Contrato</option>
                         <option value="1">Sistema Contra Incendios & Hidrosanitarios</option>
                         <option value="2">Ventilacion y Aire Acondicionado</option>
                       </select>
                   </div>
                   <div class="col-sm-1">
-                      <select class="custom-select">
+                      <select class="custom-select" name="ano">
                         <option>Año</option>
                         <option value="2019">2019</option>
                         <option value="2020">2020</option>
@@ -49,7 +50,7 @@
                       </select>
                   </div>
                   <div class="col-sm-1">
-                      <select class="custom-select">
+                      <select class="custom-select" name="mes">
                         <option>Mes</option>
                         <?php
                           $meses = $db->query("SELECT * FROM meses");
@@ -63,7 +64,9 @@
                   </div>
                   <div class="col-sm-2">
                       <button class="btn btn-danger"><i class="fas fa-file-pdf"></i> Informe General</button>
+                    </form>
                   </div>
+                  
                 </div>
               </div>
               <div class="card-body">
