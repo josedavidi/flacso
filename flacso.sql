@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 02-01-2020 a las 20:54:14
+-- Tiempo de generación: 06-01-2020 a las 22:18:06
 -- Versión del servidor: 5.7.26
 -- Versión de PHP: 7.2.18
 
@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `agenda_procesos` (
   `proceso_id` int(11) NOT NULL,
   `age` varchar(10) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2353 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=2363 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `agenda_procesos`
@@ -2395,7 +2395,17 @@ INSERT INTO `agenda_procesos` (`id`, `equipo_id`, `mes_id`, `proceso_id`, `age`)
 (2349, 94, 7, 108, '2019'),
 (2350, 94, 7, 109, '2019'),
 (2351, 94, 9, 106, '2019'),
-(2352, 94, 11, 106, '2019');
+(2352, 94, 11, 106, '2019'),
+(2353, 42, 1, 60, '2020'),
+(2354, 42, 1, 61, '2020'),
+(2355, 16, 2, 52, '2020'),
+(2356, 16, 2, 53, '2020'),
+(2357, 46, 1, 66, '2020'),
+(2358, 46, 1, 67, '2020'),
+(2359, 86, 1, 96, '2020'),
+(2360, 86, 1, 97, '2020'),
+(2361, 67, 2, 73, '2020'),
+(2362, 67, 2, 74, '2020');
 
 -- --------------------------------------------------------
 
@@ -2959,37 +2969,7 @@ CREATE TABLE IF NOT EXISTS `equipo_fotos` (
   `nombre` varchar(100) NOT NULL,
   `eti` varchar(15) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=92 DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `equipo_fotos`
---
-
-INSERT INTO `equipo_fotos` (`id`, `nombre`, `eti`) VALUES
-(68, '../images/equipos/2.jpg', '3042'),
-(69, '../images/equipos/2', '1685'),
-(70, '../images/equipos/2', '8254'),
-(71, '../images/equipos/2', '8664'),
-(72, '../images/equipos/1.jpg', '5442'),
-(73, '../images/equipos/2.jpg', '5442'),
-(74, '../images/equipos/20161109_085448.jpg', '5442'),
-(75, '../images/equipos/piscina.jpg', '3865'),
-(76, '../images/equipos/biosun.jpg', '5445'),
-(77, '../images/equipos/farola.png', '5445'),
-(78, '../images/equipos/riego.gif', '5445'),
-(79, '../images/equipos/piscina.jpg', '4485'),
-(80, '../images/equipos/20161109_085448.jpg', '2330'),
-(81, '../images/equipos/tipo_split_doctorado (1).JPG', '2330'),
-(82, '../images/equipos/Bomba_Agua_Lluvia_Flacso_Matriz.jpeg', '1475'),
-(83, '../images/equipos/carwallpaper.jpg', '3604'),
-(84, '../images/equipos/referidos.gif', '7250'),
-(85, '../images/equipos/camaroLogo.png', '5406'),
-(86, '../images/equipos/carwallpaper.jpg', '8920'),
-(87, '../images/equipos/c', '3186'),
-(88, '../images/equipos/camaroLogo.png', '9431'),
-(89, '../images/equipos/pulir.jpg', '9431'),
-(90, '../images/equipos/referidos.gif', '386'),
-(91, '../images/equipos/carwallpaper.jpg', '1405');
+) ENGINE=InnoDB AUTO_INCREMENT=99 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -3004,33 +2984,7 @@ CREATE TABLE IF NOT EXISTS `equipo_tareas` (
   `proceso_id` int(11) NOT NULL,
   `eti` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=98 DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `equipo_tareas`
---
-
-INSERT INTO `equipo_tareas` (`id`, `equipo_id`, `proceso_id`, `eti`) VALUES
-(87, 42, 61, 1475),
-(86, 42, 60, 1475),
-(85, 42, 61, 2330),
-(84, 42, 60, 2330),
-(83, 79, 54, 5445),
-(82, 79, 53, 5445),
-(81, 79, 52, 5445),
-(80, 1, 3, 5442),
-(79, 1, 2, 5442),
-(78, 1, 1, 5442),
-(88, 43, 61, 3604),
-(89, 43, 64, 3604),
-(90, 42, 60, 7250),
-(91, 42, 61, 7250),
-(92, 42, 62, 7250),
-(93, 43, 60, 5406),
-(94, 43, 61, 5406),
-(95, 42, 61, 386),
-(96, 42, 64, 386),
-(97, 44, 61, 1405);
+) ENGINE=MyISAM AUTO_INCREMENT=113 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -3077,17 +3031,7 @@ CREATE TABLE IF NOT EXISTS `equipo_tareas_informe` (
   `eti` varchar(10) NOT NULL,
   `created_at` varchar(20) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=29 DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `equipo_tareas_informe`
---
-
-INSERT INTO `equipo_tareas_informe` (`id`, `user_id`, `fecha`, `mes_id`, `estado`, `observacion`, `age`, `eti`, `created_at`) VALUES
-(28, 1, '2019-02-06', '6', 'funcionando', 'sdfsdf', '2019', '1405', '10/12/19 21:30 pm'),
-(27, 1, '2019-12-11', '6', 'funcionando', 'sdflsdkfjdsf', '2019', '386', '10/12/19 21:28 pm'),
-(26, 2, '2019-12-11', '6', 'mantenimiento', 'todo bien', '2019', '5406', '10/12/19 20:45 pm'),
-(25, 2, '2019-12-12', '6', 'funcionando', 'todo ok', '2019', '7250', '10/12/19 20:27 pm');
+) ENGINE=MyISAM AUTO_INCREMENT=36 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
