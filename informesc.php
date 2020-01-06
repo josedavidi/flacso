@@ -59,7 +59,7 @@
                   </thead>
                   <tbody>
                     <?php
-                      $eti = $db->query("SELECT DISTINCT equipo_tareas_c.eti, equipo_tareas_informe_c.id as eti_id, equipo_tareas_informe_c.eti as idEti, meses.nombre as mes_nombre, equipos.nombre as equipo_nombre, equipos.foto as equipo_foto, equipo_tareas_informe_c.estado as eti_estado, usuarios.nombres as user_name, usuarios.apellidos as user_lastname, equipo_tareas_informe_c.fecha as eti_fecha FROM equipo_tareas_informe_c INNER JOIN meses ON equipo_tareas_informe_c.mes_id = meses.id INNER JOIN equipo_tareas_c ON equipo_tareas_informe_c.eti = equipo_tareas_c.eti INNER JOIN equipos ON equipo_tareas_c.equipo_id = equipos.id INNER JOIN usuarios ON equipo_tareas_informe_c.user_id = usuarios.id  WHERE age = 2019")or die('error'.mysqli_errno($db));
+                      $eti = $db->query("SELECT DISTINCT equipo_tareas_c.eti, equipo_tareas_informe_c.id as eti_id, equipo_tareas_informe_c.eti as idEti, meses.nombre as mes_nombre, equipos.nombre as equipo_nombre, equipos.foto as equipo_foto, equipo_tareas_informe_c.estado as eti_estado, usuarios.nombres as user_name, usuarios.apellidos as user_lastname, equipo_tareas_informe_c.fecha as eti_fecha FROM equipo_tareas_informe_c INNER JOIN meses ON equipo_tareas_informe_c.mes_id = meses.id INNER JOIN equipo_tareas_c ON equipo_tareas_informe_c.eti = equipo_tareas_c.eti INNER JOIN equipos ON equipo_tareas_c.equipo_id = equipos.id INNER JOIN usuarios ON equipo_tareas_informe_c.user_id = usuarios.id")or die('error'.mysqli_errno($db));
 
                       while($fila = mysqli_fetch_array($eti))
                       {
